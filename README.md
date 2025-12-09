@@ -16,22 +16,33 @@ Simple microblog (“chirps”) built on **Laravel 12 / PHP 8.2**, Blade, Tailwi
 
 ## Quickstart
 ```bash
+# Clone Repository
 git clone https://github.com/dafwa/belajar-laravel.git
+
+# Open Project Folder
 cd belajar-laravel
 
+# Setup Project
+# (install all dependencies, setup .env, keygen, migrate, and npm install && build)
+composer run setup
+
+# Run Dev servers (PHP + queue listener + Vite)
+composer run dev
+```
+
+## Manual Setup
+```bash
+# If you want to setup project manually
 npm install && npm run build
 composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
-
-# Dev servers (PHP + queue listener + Vite)
-composer run dev
 ```
 
 Handy composer scripts:
-- `composer setup` – install PHP deps, ensure `.env`, keygen, migrate (force), npm install, build.
-- `composer dev` – run `php artisan serve`, queue listener, and `npm run dev` via `concurrently`.
+- `composer run setup` – install PHP deps, ensure `.env`, keygen, migrate (force), npm install, build.
+- `composer run dev` – run `php artisan serve`, queue listener, and `npm run dev` via `concurrently`.
 - `composer test` – clear config then `php artisan test` (Pest).
 
 ## Admin Access
