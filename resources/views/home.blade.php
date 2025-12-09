@@ -4,7 +4,14 @@
     </x-slot:title>
 
     <div class="max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold mt-8">Latest Chirps</h1>
+        <div class="mt-8">
+            @auth
+                <p class="text-lg text-base-content/60">Welcome, {{ auth()->user()->name }}!</p>
+            @else
+                <p class="text-lg text-base-content/60">Welcome!</p>
+            @endauth
+            <h1 class="text-3xl font-bold mt-2">Latest Chirps</h1>
+        </div>
        
     <!-- Chirp Form -->
     <div class="card bg-base-100 shadow mt-8">
