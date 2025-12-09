@@ -1,4 +1,4 @@
-# belajar-laravel – Chirper with Admin Dashboard
+# belajar-laravel - Chirper with Admin Dashboard
 
 Simple microblog (“chirps”) built on **Laravel 12 / PHP 8.2**, Blade, Tailwind CSS v4, and Vite. Users can post short updates, edit/delete their own chirps, and admins can manage users and all chirps from a dashboard.
 
@@ -23,7 +23,7 @@ git clone https://github.com/dafwa/belajar-laravel.git
 cd belajar-laravel
 
 # Setup Project
-# (install all dependencies, setup .env, keygen, migrate, and npm install && build)
+# (Install all dependencies + setup .env + keygen + migrate database + npm install && build)
 composer run setup
 
 # Run Dev servers (PHP + queue listener + Vite)
@@ -41,9 +41,9 @@ php artisan migrate
 ```
 
 Handy composer scripts:
-- `composer run setup` – install PHP deps, ensure `.env`, keygen, migrate (force), npm install, build.
-- `composer run dev` – run `php artisan serve`, queue listener, and `npm run dev` via `concurrently`.
-- `composer test` – clear config then `php artisan test` (Pest).
+- `composer setup` - install PHP deps, ensure `.env`, keygen, migrate (force), npm install, build.
+- `composer dev` - run `php artisan serve`, queue listener, and `npm run dev` via `concurrently`.
+- `composer test` - clear config then `php artisan test` (Pest).
 
 ## Admin Access
 - Users have an `is_admin` boolean. Admin-only routes use `IsAdmin` middleware (aliased as `admin`).
@@ -71,14 +71,14 @@ Handy composer scripts:
 - Tailwind theme tokens and DaisyUI provide the dark/light toggle; success toasts auto-fade.
 
 ## Project Layout Highlights
-- `app/Http/Controllers/ChirpController.php` – feed + CRUD.
-- `app/Http/Controllers/AdminController.php` – dashboard, user/chirp management.
-- `app/Http/Middleware/IsAdmin.php` – admin gate.
-- `app/Policies/ChirpPolicy.php` – ownership enforcement.
-- `resources/views/` – Blade layouts, auth screens, feed, admin pages.
-- `resources/css/app.css` – Tailwind v4 + custom themes; `resources/js/bootstrap.js` – Axios setup.
-- `database/migrations/` – chirps table, `is_admin` column, cascade delete update.
-- `add_admin_guide.md` – step-by-step notes on how the admin feature was added.
+- `app/Http/Controllers/ChirpController.php` - feed + CRUD.
+- `app/Http/Controllers/AdminController.php` - dashboard, user/chirp management.
+- `app/Http/Middleware/IsAdmin.php` - admin gate.
+- `app/Policies/ChirpPolicy.php` - ownership enforcement.
+- `resources/views/` - Blade layouts, auth screens, feed, admin pages.
+- `resources/css/app.css` - Tailwind v4 + custom themes; `resources/js/bootstrap.js` - Axios setup.
+- `database/migrations/` - chirps table, `is_admin` column, cascade delete update.
+- `add_admin_guide.md` - step-by-step notes on how the admin feature was added.
 
 ## Testing
 - Pest is available (`./vendor/bin/pest` or `composer test`). Current suite is the Laravel examples; add feature tests for chirp CRUD and admin flows as needed.
