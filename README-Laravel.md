@@ -1,29 +1,3 @@
-```bash
-# Clone the Repository
-git clone https://github.com/dafwa/belajar-laravel.git
-
-# Go to the Project Folder
-cd belajar-laravel
-
-# Run both npm install and run build for dependencies
-npm install && npm run build
-
-# Run composer install for dependencies
-composer install
-
-# Copy env
-cp .env.example .env
-
-# Generate key
-php artisan key:generate
-
-# Migrate database
-php artisan migrate
-
-# Run Project
-composer run dev
-```
-
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
