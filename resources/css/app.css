@@ -325,3 +325,23 @@ h6 {
     font-weight: 400 !important;
     color: var(--text-12);
 }
+
+/* ============================================ */
+/* Theme-safe overrides for common utility colors */
+/* (used in Blade views; keeps contrast in both themes) */
+/* ============================================ */
+:where(.text-gray-900, .text-gray-800, .text-gray-700, .text-gray-800) { color: var(--text-12) !important; }
+:where(.text-gray-600, .text-gray-500, .text-gray-400, .text-gray-300) { color: var(--text-10) !important; }
+:where(.text-blue-600, .text-blue-800) { color: var(--link) !important; }
+:where(.text-green-600, .text-green-800, .text-green-900) { color: color-mix(in oklab, var(--color-primary) 90%, var(--text-12)) !important; }
+:where(.text-red-600, .text-red-900) { color: #ef4444 !important; }
+:where(.text-purple-800) { color: color-mix(in oklab, var(--color-primary) 70%, var(--text-12)) !important; }
+
+:where(.bg-white, .bg-gray-50) { background-color: var(--color-base-100) !important; color: var(--text-12); }
+:where(.bg-blue-100) { background-color: color-mix(in oklab, var(--link) 14%, var(--color-base-100)) !important; }
+:where(.bg-green-50) { background-color: color-mix(in oklab, var(--color-primary) 12%, var(--color-base-100)) !important; }
+:where(.bg-green-100) { background-color: color-mix(in oklab, var(--color-primary) 18%, var(--color-base-100)) !important; }
+:where(.bg-purple-100, .bg-gray-100) { background-color: color-mix(in oklab, var(--text-10) 14%, var(--color-base-100)) !important; }
+
+:where(.border-gray-200, .border-gray-100, .border-gray-300) { border-color: var(--border-color-soft) !important; }
+:where(.divide-gray-200) > :not([hidden]) ~ :not([hidden]) { border-color: var(--border-color-soft); }
