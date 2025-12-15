@@ -28,14 +28,14 @@
                         </div>
                         <div class="flex items-center space-x-3 ml-4">
                             <a href="{{ route('admin.chirps.edit', $chirp) }}" 
-                               class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                               class="text-blue-600 hover:text-blue-800 text-sm font-medium btn">
                                 Edit
                             </a>
                             <form action="{{ route('admin.chirps.destroy', $chirp) }}" method="POST" 
                                   onsubmit="return confirm('Are you sure you want to delete this chirp?');">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="text-red-600 hover:text-red-900 text-sm font-medium">
+                                <button type="submit" class="text-red-600 hover:text-red-900 text-sm font-medium btn">
                                     Delete
                                 </button>
                             </form>
