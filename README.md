@@ -1,4 +1,4 @@
-# belajar-laravel - Chirper with Admin Dashboard
+# chirper-laravel - Chirper with Admin Dashboard
 
 Simple microblog (“chirps”) built on **Laravel 12 / PHP 8.2**, Blade, Tailwind CSS v4, and Vite. Users can post short updates, edit/delete their own chirps, and admins can manage users and all chirps from a dashboard.
 
@@ -17,10 +17,10 @@ Simple microblog (“chirps”) built on **Laravel 12 / PHP 8.2**, Blade, Tailwi
 ## Quickstart
 ```bash
 # Clone Repository
-git clone https://github.com/dafwa/belajar-laravel.git
+git clone https://github.com/dafwa/chirper-laravel.git
 
 # Open Project Folder
-cd belajar-laravel
+cd chirper-laravel
 
 # Setup Project
 # (Install all dependencies + setup .env + keygen + migrate database + npm install && build)
